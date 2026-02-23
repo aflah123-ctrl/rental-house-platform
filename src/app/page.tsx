@@ -1,7 +1,10 @@
-import styles from "./page.module.css";
+import Navbar from "../components/navbar";
+import SearchBox from "../components/SearchBox";
+import HouseSection from "../components/HouseSection";
 
 export default function Home() {
   return (
+<<<<<<< HEAD
     <main className={styles.main}>
       <section className={styles.hero}>
         <div className={styles.heroBackground} />
@@ -29,28 +32,14 @@ export default function Home() {
           </div>
         </div>
       </section>
+=======
+    <main>
+      <Navbar />
+      <SearchBox />
+>>>>>>> b08d140 (Add homepage components and layout)
 
-      <section className={styles.features}>
-        <div className="premium-card">
-          <div className={styles.featureIcon}>⚡</div>
-          <h3>Lightning Fast</h3>
-          <p>Built with Next.js for ultimate speed and SEO performance.</p>
-        </div>
-        <div className="premium-card">
-          <div className={styles.featureIcon}>🎨</div>
-          <h3>Premium Design</h3>
-          <p>Meticulously crafted UI with modern aesthetics and smooth motion.</p>
-        </div>
-        <div className="premium-card">
-          <div className={styles.featureIcon}>🛡️</div>
-          <h3>Scalable Architecture</h3>
-          <p>Clean code patterns designed to grow with your business.</p>
-        </div>
-      </section>
-
-      <footer className={styles.footer}>
-        <p>&copy; {new Date().getFullYear()} Aflu. All rights reserved.</p>
-      </footer>
+      <HouseSection title="Popular homes in Bengaluru" />
+      <HouseSection title="Available this weekend" />
     </main>
   );
 }
