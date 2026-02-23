@@ -18,8 +18,9 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.4;
-  background: url('/hero-bg.png') center/cover no-repeat;
+  opacity: 0.3;
+  background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 80%),
+    url('/hero-bg.png') center/cover no-repeat;
 }
 
 .heroContent {
@@ -54,6 +55,53 @@
 .featureIcon {
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+.searchBar {
+  display: flex;
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  gap: 0.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.searchInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 0.8rem 1rem;
+  color: white;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  outline: none;
+}
+
+.searchInput::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.searchSelect {
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  color: white;
+  padding: 0 1rem;
+  border-radius: 12px;
+  font-family: var(--font-main);
+  cursor: pointer;
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .searchBar {
+    flex-direction: column;
+    padding: 1rem;
+  }
 }
 
 @keyframes fadeIn {

@@ -13,23 +13,19 @@ export default function Home() {
             Welcome to Aflu. We build high-performance, beautifully designed
             web experiences that push the boundaries of what&apos;s possible.
           </p>
-          <div className={styles.ctas}>
-            <a href="#" className="btn-primary">
-              Get Started
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
+          <div className={styles.searchBar}>
+            <input
+              type="text"
+              placeholder="Search by location, neighborhood, or city..."
+              className={styles.searchInput}
+            />
+            <select className={styles.searchSelect}>
+              <option>Type</option>
+              <option>House</option>
+              <option>Apartment</option>
+              <option>Villa</option>
+            </select>
+            <button className="btn-primary">Search</button>
           </div>
         </div>
       </section>
